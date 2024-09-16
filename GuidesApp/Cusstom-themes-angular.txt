@@ -1,0 +1,10 @@
+17
+http://mcg.mbitson.com/#!?mcgpalette0=%23ffcb77&mcgpalette1=%233f51b5&themename=mcgtheme
+https://github.com/angular/components/blob/main/guides/theming.md
+https://stackoverflow.com/a/78525437
+
+
+18
+https://medium.com/@raultonello18/angular-material-m3-dynamic-runtime-colors-6d6d1036d2bb
+https://github.com/angular/components/blob/main/src/dev-app/theme-m3.scss
+https://ng-comp-devapp.web.app/theme
