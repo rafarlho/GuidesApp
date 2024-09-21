@@ -1,3 +1,16 @@
-.main-container {
-    width: 100vw;
+.base-container {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    
+    .button-div {
+        width: 100%;
+        justify-content: end;
+        display: flex;
+    }
+    .main-container {
+        width: 100vw;
+        flex-grow: 1;
+    }
 }

@@ -1,22 +1,43 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Guides</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
-<mat-drawer-container class="main-container" [hasBackdrop]="true" >
-  <mat-drawer #drawer [mode]="'push'">
-    hi there
-  </mat-drawer>
-  <mat-drawer-content>
-    hello
-    
+<div [class]="'base-container ' + theme">
+  <mat-toolbar>
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Guides</span>
+    <div class="button-div">
+      <button mat-icon-button (click)="toggleTheme()">
+        <mat-icon>
+          @if(theme === 'light-theme'){ 
+            dark_mode 
+          } @else {
+            light_mode
+          }
+        </mat-icon>
+      </button>
+      <a href="https://github.com/rafarlho" target="_blanck">  
+        <button mat-icon-button >
+          <mat-icon>
+            <fa-icon [icon]="faGitHub"></fa-icon>
+          </mat-icon>
+        </button>
+      </a>
+      <a href="https://www.linkedin.com/in/rafarlho/" target="_blanck">  
+        <button mat-icon-button >
+          <mat-icon>
+            <fa-icon [icon]="faLinkedIn"></fa-icon>
+          </mat-icon>
+        </button>
+      </a>
+    </div>
+  </mat-toolbar>
+  <mat-divider/>
+  <mat-drawer-container class="main-container" [hasBackdrop]="true" >
+    <mat-drawer #drawer [mode]="'push'">
+      hi there
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-breadcrumb/>
+      <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
+</div>
