@@ -6,9 +6,9 @@ export const AngularMaterialRoutes: Routes = [
         path: '', pathMatch: 'full', component: AngularMaterialComponent
     },
     {
-        path:'costumTheme',
+        path:'custom-theme',
         data: {
-            breadcrum: "Costum theme"
+            breadcrum: "Custom theme"
         },
         loadComponent: ()=> import('./create-custom-theme/create-custom-theme.component').then(m => m.CreateCustomThemeComponent) 
     }

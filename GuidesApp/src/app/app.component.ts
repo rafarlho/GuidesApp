@@ -10,6 +10,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { BreadcrumbComponent } from './shared/features/breadcrumb/breadcrumb.component';
+import { SideOptionsComponent } from './shared/features/side-options/side-options.component';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { BreadcrumbComponent } from './shared/features/breadcrumb/breadcrumb.com
     MatDividerModule,
     FontAwesomeModule,
     RouterOutlet,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SideOptionsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
